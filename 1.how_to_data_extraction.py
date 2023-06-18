@@ -1,6 +1,6 @@
 ''' 
 After some digging I thought that I will start by first just trying to extract some basic data from an endpoint (randomly, I chose 
-coindesk API, just probably for the sake of simplicity... how naive 😈 :thumbsup: )
+coindesk API, just probably for the sake of simplicity... how naive 😈 )
 '''
 
 import requests
