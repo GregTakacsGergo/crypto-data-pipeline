@@ -1,8 +1,3 @@
-''' 
-After some digging I thought that I will start by first just trying to extract some basic data from an endpoint (randomly, I chose 
-coindesk API, just probably for the sake of simplicity... how naive 😈 )
-'''
-
 import requests
 import time
 
@@ -16,9 +11,6 @@ while time.time() - start_time < duration:
 	btc_time = data["time"]["updated"]
 	print(f"BTC price (USD) at {btc_time} is:{btc_price}")
 	time.sleep(1)
-
-import requests
-import time
 
  
  
