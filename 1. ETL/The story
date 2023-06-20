@@ -1,8 +1,10 @@
   After some digging I thought that I will start by first just trying to extract some basic data from an endpoint. Randomly, I chose 
-coindesk API. The result was one price update per minute (1.coindesk_data_extraction.py). Didn't read this API's documentation thoroughly, just started 
-extracting every second, but quickly realized it's nonsense that way. I need an API that provides me price update every second, so I
-thought let's use something more robust... what other than binance APIs? 
-  I came upon this endpoint: https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT. Now this seamed to work after some work and d
-debugging. ( )
+coindesk API. The result was one price update per minute (1.coindesk_data_extraction.py). Didn't read this API's documentation thoroughly, just started extracting every second, but quickly realized it's nonsense that way. I need an API that provides me price update every second, so I thought let's use something more robust... what other than binance APIs? 
+  I came upon this endpoint: https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT. Now this seamed to work after some work and
+debugging. But, this is very important, making a request to this endpoint will not give us time data! Note that coindesk API did, but not 
+with satisfiing precision. 
+  And here comes my problem: I can use https://api.binance.com/api/v3/time endpoint too for extracting time data and continue on with 
+making the complete ETL, but one thought would leave me with a bitter taste in my mouth. I can show that there is (of course) a difference in time between my two extractions, and this bothers me... I want high level of precision, so I need to figure out a way already here at the very beggining, to eliminate this time difference efficiently, after all we cannot want the propagation of error to kick in.
+
   
 
