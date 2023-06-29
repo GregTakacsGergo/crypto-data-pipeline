@@ -6,8 +6,8 @@ so I thought let's use something more robust... what other than binance APIs?
 debugging. But, this is very important, making a request to this endpoint will not give us time data! Note that coindesk API did, but not 
 with satisfiing precision. 
   I can use https://api.binance.com/api/v3/time at once with price data endpoint and continue on with making the complete ETL using 
-concurrent.futures module to execute the two extractions concurrently (2.concurrent_binance_extraction), but there will be of course a 
-difference in server time between my two extractions (3.), and this bothers me... I want high level of precision,so I need to figure out
+concurrent.futures module to execute the two extractions concurrently (2.concurrent_binance_extraction.py), but there will be of course a 
+difference in server time between my two extractions (3.time_difference.py), and this bothers me... I want high level of precision,so I need to figure out
 a way already here at the very beggining, to eliminate this time difference efficiently, after all we cannot allow propagation of error 
 to kick in.
 
