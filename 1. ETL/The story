@@ -7,9 +7,11 @@ debugging. But, this is very important, making a request to this endpoint will n
 with satisfiing precision. 
   I can use https://api.binance.com/api/v3/time at once with price data endpoint and continue on with making the complete ETL using 
 concurrent.futures module to execute the two extractions concurrently (2.concurrent_binance_extraction.py), but there will be of course a 
-difference in time between my two extractions (3.time_difference.py), and this bothers me... I want high level of precision,so I need to 
-figure out a way already here at the very beggining, to eliminate this time difference efficiently, after all we cannot allow propagation
-of error to kick in.
+finalization time difference in between my two extraction tasks (4.???), and a time difference between my local_system_time and Binance's BTCUSDT API's
+server_time (3.time_difference.py). 
+  Note that in -2.- I used threading in order to improve overall performance of the ETL process. I want acceptable level of precision, so
+I need to figure out a way already here at the very beggining, to eliminate these time deltas efficiently, after all propagation of error 
+is a big enemy of this project. 
 
 
   
