@@ -10,7 +10,7 @@ concurrent.futures module to execute the two extractions concurrently (2.concurr
 finalization time difference in between my two extraction tasks (4.???), and a time difference between my local_system_time and Binance's BTCUSDT API's
 server_time (3.time_difference.py). 
   Note that in -2.- I used threading in order to improve overall performance of the ETL process. I want acceptable level of precision, so
-I need to figure out a way already here at the very beggining, to eliminate these time deltas efficiently, after all propagation of error 
+I need to figure out a way already here at the very beggining, to eliminate these time deltas efficiently, after all, propagation of error 
 is a big enemy of this project. 
 
 
