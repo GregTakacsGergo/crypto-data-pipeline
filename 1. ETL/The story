@@ -9,13 +9,16 @@ with satisfiing precision.
 concurrent.futures module to execute the two extractions concurrently (2.concurrent_binance_extraction.py), but there will be of course a 
 finalization time difference in between my two extraction tasks (4.???), and a time difference between my local_system_time and Binance's BTCUSDT API's
 server_time (3.server_time_difference.py). 
-  Note that in -2.- I used threading in order to improve overall performance of the ETL process. I want acceptable level of precision, so
-I need to figure out a way already here at the very beggining, to eliminate these time deltas efficiently, after all, propagation of error 
-is the last thing that is welcome in this project. 
-
+*
 --so far basically I'm proving that the usage of binance apis is problematic because we have two endpoints. I'm trying to put 
 together two lists of data in one later process. Let's say one graph which plot BTC price against Binance server time. But my server time
 data must be a little to early or late compared to the "present" of the price data. This time delta is what I'd also like to eliminate,
 by first measuring it, and then, syncronization. 
+*
+  Note that in -2.- I used threading in order to improve overall performance of the ETL process. I want acceptable level of precision, so
+I need to figure out a way already here at the very beggining, to eliminate these time deltas efficiently, after all, propagation of error 
+is the last thing that is welcome in this project. 
+
+
   
 
