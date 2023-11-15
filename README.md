@@ -1,4 +1,4 @@
-# crypto_data_pipeline
+# crypto-data-pipeline
 ETL, visualizations, statistics, technical indicators 
 
 
